@@ -1,0 +1,245 @@
+/* QuoteForm component styles */
+.quote-form {
+  /* Form is rendered inside quote__form-body */
+}
+
+.quote-form__grid {
+  display: grid;
+  gap: 20px;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.quote-form__field {
+  /* Full width on mobile, half on desktop */
+}
+
+.quote-form__field--full {
+  @media (min-width: 640px) {
+    grid-column: span 2;
+  }
+}
+
+.quote-form__label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #64748b; /* slate-500 */
+}
+
+.quote-form__label-required {
+  margin-left: 4px;
+  color: var(--color-signal);
+}
+
+.quote-form__input-wrapper {
+  position: relative;
+}
+
+.quote-form__input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  height: 16px;
+  width: 16px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #94a3b8; /* slate-400 */
+}
+
+.quote-form__input {
+  width: 100%;
+  height: 48px;
+  border: 1px solid var(--color-line);
+  background-color: var(--color-paper);
+  padding: 0 14px;
+  padding-left: 40px;
+  font-size: 14px;
+  color: var(--color-ink);
+  transition: all 200ms ease;
+
+  &::placeholder {
+    color: #94a3b8; /* slate-400 */
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-signal);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-signal) 15%, transparent);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: var(--color-mist);
+  }
+
+  &[aria-invalid="true"] {
+    border-color: var(--color-signal);
+  }
+}
+
+.quote-form__select-wrapper {
+  position: relative;
+}
+
+.quote-form__select-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  height: 16px;
+  width: 16px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #94a3b8; /* slate-400 */
+}
+
+.quote-form__select {
+  width: 100%;
+  height: 48px;
+  border: 1px solid var(--color-line);
+  background-color: var(--color-paper);
+  padding: 0 40px 0 14px;
+  font-size: 14px;
+  color: var(--color-ink);
+  appearance: none;
+  transition: all 200ms ease;
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-signal);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-signal) 15%, transparent);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: var(--color-mist);
+  }
+
+  &[aria-invalid="true"] {
+    border-color: var(--color-signal);
+  }
+}
+
+.quote-form__error {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 6px;
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--color-signal);
+}
+
+.quote-form__error-icon {
+  margin-top: 1px;
+  flex-shrink: 0;
+  height: 12px;
+  width: 12px;
+}
+
+.quote-form__consent {
+  @media (min-width: 640px) {
+    grid-column: span 2;
+  }
+}
+
+.quote-form__consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 11px;
+  line-height: 1.625;
+  color: #64748b; /* slate-500 */
+}
+
+.quote-form__consent-input {
+  margin-top: 2px;
+  flex-shrink: 0;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  accent-color: var(--color-signal);
+}
+
+.quote-form__consent-text {
+  /* text content */
+}
+
+.quote-form__form-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 20px;
+  border: 1px solid color-mix(in srgb, var(--color-signal) 30%, transparent);
+  background-color: color-mix(in srgb, var(--color-signal) 5%, transparent);
+  padding: 12px;
+  font-size: 12px;
+  line-height: 1.625;
+  color: var(--color-signal);
+}
+
+.quote-form__form-error-icon {
+  margin-top: 1px;
+  flex-shrink: 0;
+  height: 16px;
+  width: 16px;
+}
+
+.quote-form__submit {
+  margin-top: 24px;
+  width: 100%;
+}
+
+.quote-form__submit-icon {
+  transition: transform 200ms ease;
+}
+
+.quote-form__submit:hover .quote-form__submit-icon {
+  transform: translateX(4px);
+}
+
+.quote-form__disclaimer {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.625;
+  color: #94a3b8; /* slate-400 */
+}
+
+/* Success state */
+.quote-form__success {
+  text-align: center;
+  padding: 24px 0;
+}
+
+.quote-form__success-icon {
+  margin: 0 auto 16px;
+  display: flex;
+  height: 64px;
+  width: 64px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: color-mix(in srgb, var(--color-signal) 15%, transparent);
+  color: var(--color-signal);
+}
+
+.quote-form__success-title {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--color-ink);
+}
+
+.quote-form__success-text {
+  font-size: 14px;
+  line-height: 1.625;
+  color: #64748b; /* slate-500 */
+}

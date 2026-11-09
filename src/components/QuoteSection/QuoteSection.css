@@ -1,0 +1,221 @@
+/* QuoteSection component styles */
+.quote {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--color-line);
+  background-color: var(--color-mist);
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @media (min-width: 1024px) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+}
+
+.quote__grid-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  mask-image: linear-gradient(to bottom, black, transparent 80%);
+}
+
+.quote__header {
+  display: grid;
+  gap: 48px;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 0.88fr 1.12fr;
+    align-items: start;
+    gap: 80px;
+  }
+}
+
+.quote__label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: #64748b; /* slate-500 */
+}
+
+.quote__label-line {
+  height: 1px;
+  width: 32px;
+  background-color: var(--color-signal);
+}
+
+.quote__heading {
+  margin-top: 20px;
+  max-width: 520px;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+  color: var(--color-ink);
+}
+
+.quote__heading-accent {
+  display: block;
+  color: var(--color-signal);
+}
+
+.quote__description {
+  margin-top: 20px;
+  max-width: 480px;
+  font-size: 16px;
+  line-height: 1.625;
+  color: #64748b; /* slate-500 */
+}
+
+.quote__benefits {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.quote__benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: #475569; /* slate-600 */
+}
+
+.quote__benefit-icon {
+  margin-top: 2px;
+  flex-shrink: 0;
+  display: flex;
+  height: 20px;
+  width: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-signal);
+  color: var(--color-paper);
+}
+
+.quote__benefit-icon svg {
+  height: 12px;
+  width: 12px;
+}
+
+.quote__contacts {
+  margin-top: 40px;
+  border-top: 1px solid var(--color-line);
+  padding-top: 28px;
+}
+
+.quote__contacts-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #94a3b8; /* slate-400 */
+}
+
+.quote__phone {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--color-ink);
+  transition: color 200ms ease;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-signal);
+  }
+}
+
+.quote__phone-icon {
+  flex-shrink: 0;
+  height: 20px;
+  width: 20px;
+  color: var(--color-signal);
+}
+
+.quote__email {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #64748b; /* slate-500 */
+  transition: color 200ms ease;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-signal);
+  }
+}
+
+.quote__email-icon {
+  flex-shrink: 0;
+  height: 16px;
+  width: 16px;
+}
+
+.quote__form-wrapper {
+  position: relative;
+}
+
+.quote__form-card {
+  border: 1px solid var(--color-line);
+  background-color: var(--color-paper);
+  box-shadow: 0 30px 80px -52px rgba(15, 23, 42, 0.45);
+}
+
+.quote__form-card::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 3px;
+  background-color: var(--color-signal);
+}
+
+.quote__form-header {
+  border-bottom: 1px solid var(--color-line);
+  padding: 24px 28px 28px;
+
+  @media (min-width: 640px) {
+    padding: 32px 36px 36px;
+  }
+}
+
+.quote__form-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #94a3b8; /* slate-400 */
+}
+
+.quote__form-title {
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--color-ink);
+}
+
+.quote__form-subtitle {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #64748b; /* slate-500 */
+}
+
+.quote__form-body {
+  padding: 24px;
+
+  @media (min-width: 640px) {
+    padding: 32px;
+  }
+}

@@ -1,0 +1,119 @@
+/* Blueprint component styles */
+.blueprint {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 440px;
+  overflow: hidden;
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+  padding: 20px;
+
+  @media (min-width: 640px) {
+    padding: 28px;
+  }
+}
+
+.blueprint__grid-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+}
+
+.blueprint__fade {
+  position: absolute;
+  inset-block: 0;
+  right: 0;
+  width: 50%;
+  background: linear-gradient(to left, var(--color-ink), color-mix(in srgb, var(--color-ink) 60%, transparent), transparent);
+}
+
+.blueprint__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.blueprint__code {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: color-mix(in srgb, var(--color-paper) 40%, transparent);
+}
+
+.blueprint__label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: color-mix(in srgb, var(--color-paper) 40%, transparent);
+}
+
+.blueprint__label-dot {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: var(--color-signal);
+}
+
+.blueprint__drawing {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.blueprint__drawing svg {
+  height: 100%;
+  width: 100%;
+  max-height: 320px;
+}
+
+.blueprint__footer {
+  border-top: 1px solid color-mix(in srgb, var(--color-paper) 10%, transparent);
+  padding-top: 16px;
+}
+
+.blueprint__title {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--color-paper);
+}
+
+.blueprint__specs {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.blueprint__spec {
+  display: flex;
+  flex-direction: column;
+}
+
+.blueprint__spec-label {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: color-mix(in srgb, var(--color-paper) 35%, transparent);
+}
+
+.blueprint__spec-value {
+  margin-top: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: color-mix(in srgb, var(--color-paper) 80%, transparent);
+}

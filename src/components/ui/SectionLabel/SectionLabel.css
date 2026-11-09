@@ -1,0 +1,26 @@
+/* SectionLabel component styles */
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+}
+
+.section-label__line {
+  height: 1px;
+  width: 28px;
+  flex-shrink: 0;
+  background-color: var(--color-signal);
+}
+
+/* Tone variants */
+.section-label--light {
+  color: #64748b; /* slate-500 */
+}
+
+.section-label--dark {
+  color: color-mix(in srgb, var(--color-paper) 45%, transparent);
+}

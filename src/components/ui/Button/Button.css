@@ -1,0 +1,116 @@
+/* Button component styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+  border-radius: 2px;
+  border: 1px solid;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  transition: all 200ms ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:disabled,
+.btn[disabled] {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Variants */
+.btn--primary {
+  border-color: var(--color-signal);
+  background-color: var(--color-signal);
+  color: var(--color-paper);
+}
+
+.btn--primary:hover:not(:disabled) {
+  border-color: var(--color-signal-dark);
+  background-color: var(--color-signal-dark);
+}
+
+.btn--outline {
+  border-color: color-mix(in srgb, var(--color-ink) 15%, transparent);
+  background-color: transparent;
+  color: var(--color-ink);
+}
+
+.btn--outline:hover:not(:disabled) {
+  border-color: var(--color-ink);
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.btn--dark {
+  border-color: var(--color-ink);
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.btn--dark:hover:not(:disabled) {
+  border-color: var(--color-ink-2);
+  background-color: var(--color-ink-2);
+}
+
+.btn--light {
+  border-color: color-mix(in srgb, var(--color-paper) 20%, transparent);
+  background-color: transparent;
+  color: var(--color-paper);
+}
+
+.btn--light:hover:not(:disabled) {
+  border-color: color-mix(in srgb, var(--color-paper) 50%, transparent);
+  background-color: color-mix(in srgb, var(--color-paper) 10%, transparent);
+}
+
+.btn--white {
+  border-color: var(--color-paper);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.btn--white:hover:not(:disabled) {
+  border-color: var(--color-mist);
+  background-color: var(--color-mist);
+}
+
+/* Sizes */
+.btn--sm {
+  height: 40px;
+  padding: 0 16px;
+}
+
+.btn--md {
+  height: 48px;
+  padding: 0 20px;
+}
+
+@media (min-width: 640px) {
+  .btn--md {
+    padding: 0 24px;
+  }
+}
+
+.btn--lg {
+  height: 56px;
+  padding: 0 24px;
+}
+
+@media (min-width: 640px) {
+  .btn--lg {
+    padding: 0 28px;
+  }
+}
+
+/* Group hover effects for icons inside buttons */
+.btn-group:hover .btn-group__icon {
+  transform: translate(-4px, 4px);
+}
+
+.btn-group__icon {
+  transition: transform 200ms ease;
+}

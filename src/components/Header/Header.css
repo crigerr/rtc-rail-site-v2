@@ -1,0 +1,177 @@
+/* Header component styles */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  height: 72px;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-line) 80%, transparent);
+  background-color: color-mix(in srgb, var(--color-paper) 95%, transparent);
+  backdrop-filter: blur(24px);
+
+  @media (min-width: 1024px) {
+    height: 84px;
+  }
+}
+
+.header__inner {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.header__brand {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__divider {
+  display: none;
+  height: 32px;
+  width: 1px;
+  flex-shrink: 0;
+  background-color: var(--color-line);
+
+  @media (min-width: 1280px) {
+    display: block;
+  }
+}
+
+.header__tagline {
+  display: none;
+  max-width: 190px;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.5;
+  letter-spacing: 0.14em;
+  color: #94a3b8; /* slate-400 */
+
+  @media (min-width: 1280px) {
+    display: block;
+  }
+}
+
+.header__nav {
+  display: none;
+  align-items: center;
+  gap: 32px;
+
+  @media (min-width: 1024px) {
+    display: flex;
+  }
+}
+
+.header__nav-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748b; /* slate-500 */
+  transition: color 200ms ease;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-ink);
+  }
+}
+
+.header__actions {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 12px;
+
+  @media (min-width: 640px) {
+    gap: 16px;
+  }
+}
+
+.header__phone-link {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+  transition: color 200ms ease;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-signal);
+  }
+
+  @media (min-width: 768px) {
+    display: inline-flex;
+  }
+}
+
+.header__phone-icon {
+  height: 14px;
+  width: 14px;
+  color: var(--color-signal);
+}
+
+.header__phone-number {
+  font-variant-numeric: tabular-nums;
+}
+
+.header__contact-link {
+  display: none;
+  height: 40px;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid color-mix(in srgb, var(--color-ink) 15%, transparent);
+  padding: 0 16px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-ink);
+  transition: all 200ms ease;
+  text-decoration: none;
+
+  &:hover {
+    border-color: var(--color-ink);
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+  }
+
+  @media (min-width: 640px) {
+    display: inline-flex;
+  }
+}
+
+.header__contact-icon {
+  height: 14px;
+  width: 14px;
+}
+
+.header__mobile-phone {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-line);
+  color: var(--color-ink);
+  transition: all 200ms ease;
+  text-decoration: none;
+
+  &:hover {
+    border-color: var(--color-ink);
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+  }
+
+  @media (min-width: 640px) {
+    display: none;
+  }
+}
+
+.header__mobile-phone-icon {
+  height: 16px;
+  width: 16px;
+}

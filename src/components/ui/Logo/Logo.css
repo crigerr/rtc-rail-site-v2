@@ -1,0 +1,53 @@
+/* Logo component styles */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo__image {
+  width: auto;
+  height: 36px;
+}
+
+@media (min-width: 640px) {
+  .logo__image {
+    height: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo__image {
+    height: 44px;
+  }
+}
+
+.logo--sm .logo__image {
+  height: 36px;
+}
+
+.logo--md .logo__image {
+  height: 36px;
+}
+
+@media (min-width: 640px) {
+  .logo--md .logo__image {
+    height: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo--md .logo__image {
+    height: 44px;
+  }
+}
+
+.logo--lg .logo__image {
+  height: 48px;
+}
+
+@media (min-width: 1024px) {
+  .logo--lg .logo__image {
+    height: 56px;
+  }
+}
