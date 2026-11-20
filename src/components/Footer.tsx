@@ -84,19 +84,6 @@ export function Footer() {
             © {currentYear} {company.shortName}. ОГРН {company.ogrn} · ИНН{" "}
             {company.inn}
           </p>
-          <p className="lg:text-right">
-            Фото поезда:{" "}
-            <a
-              href="https://commons.wikimedia.org/wiki/File:VL80S-1059_with_freight_train_Dzerzhinsk.jpg"
-              target="_blank"
-              rel="noreferrer"
-              className="transition-colors hover:text-white/55"
-            >
-              Anakin / Wikimedia Commons, CC BY 3.0
-            </a>
-            {" · "}
-            платформа и цистерна — ООО «РТК»
-          </p>
         </div>
       </Container>
     </footer>

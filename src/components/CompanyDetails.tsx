@@ -32,12 +32,7 @@ export function CompanyDetails() {
       <Container>
         <div className="grid gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:gap-20">
           <div>
-            <div className="flex items-center justify-between gap-6">
-              <div className="flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-500">
-                <span className="h-px w-8 bg-signal" aria-hidden="true" />
-                Проверка контрагента
-              </div>
-            </div>
+            <div className="flex items-center justify-between gap-6"></div>
 
             <Reveal>
               <h2
