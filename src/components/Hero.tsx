@@ -72,7 +72,6 @@ export function Hero() {
         </div>
 
         <div className="mt-14 flex flex-col gap-3 border-t border-white/15 pt-4 text-[9px] uppercase tracking-[0.18em] text-white/35 sm:flex-row sm:items-center sm:justify-between lg:mt-20">
-          <span>01 / 04</span>
           <span>Аренда и техническое сопровождение</span>
         </div>
       </Container>

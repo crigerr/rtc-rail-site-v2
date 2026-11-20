@@ -19,9 +19,6 @@ export function Footer() {
 
         <div className="flex items-center justify-between gap-6 border-b border-white/10 pb-9">
           <Logo size="lg" />
-          <span className="font-mono text-[10px] tracking-[0.18em] text-white/30">
-            04 / 04
-          </span>
         </div>
 
         <div className="grid gap-12 py-12 sm:py-14 lg:grid-cols-[1.08fr_0.92fr] lg:gap-24">

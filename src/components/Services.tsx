@@ -44,9 +44,6 @@ export function Services() {
               Парк и услуги
             </h2>
           </div>
-          <span className="hidden pb-1 font-mono text-[10px] tracking-[0.18em] text-slate-400 sm:block">
-            02 / 04
-          </span>
         </div>
 
         <div className="mt-12 grid gap-6 lg:mt-16 lg:grid-cols-2 lg:gap-7">

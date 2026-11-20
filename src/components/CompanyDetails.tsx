@@ -1,4 +1,3 @@
-import { ArrowUpRight, ShieldCheck } from "lucide-react";
 import { company } from "../data/company";
 import { Container } from "./ui/Container";
 import { Reveal } from "./ui/Reveal";
@@ -14,17 +13,14 @@ const details = [
   { label: "КПП", value: company.kpp },
   { label: "ОКПО", value: company.okpo },
   { label: "ОКВЭД", value: company.okved },
-  { label: "Банк", value: company.bank },
+  { label: "БИК", value: company.bankBik },
+  { label: "Банк", value: company.bank, wide: true },
   {
     label: "Юридический адрес",
     value: company.address,
     wide: true,
   },
 ];
-
-const requestLink = `mailto:${company.email}?subject=${encodeURIComponent(
-  "Запрос банковских реквизитов",
-)}`;
 
 export function CompanyDetails() {
   return (
@@ -41,9 +37,6 @@ export function CompanyDetails() {
                 <span className="h-px w-8 bg-signal" aria-hidden="true" />
                 Проверка контрагента
               </div>
-              <span className="font-mono text-[10px] tracking-[0.18em] text-slate-400">
-                03 / 04
-              </span>
             </div>
 
             <Reveal>
@@ -51,37 +44,14 @@ export function CompanyDetails() {
                 id="details-heading"
                 className="mt-6 max-w-[520px] text-[clamp(2.4rem,3.9vw,3.5rem)] font-semibold leading-[0.98] tracking-[-0.055em] text-ink"
               >
-                Реквизиты и СБ
+                Реквизиты
               </h2>
             </Reveal>
 
             <Reveal delay={0.06}>
               <p className="mt-6 max-w-[330px] text-[14px] leading-relaxed text-slate-500">
-                Официальные данные компании для проверки контрагента и
-                взаимодействия со службой безопасности.
+                Официальные данные компании.
               </p>
-            </Reveal>
-
-            <Reveal delay={0.12}>
-              <div className="mt-9 border-t border-ink/10 pt-6">
-                <div className="flex items-start gap-3">
-                  <ShieldCheck
-                    className="mt-0.5 h-4 w-4 shrink-0 text-signal"
-                    aria-hidden="true"
-                  />
-                  <p className="max-w-[300px] text-xs leading-relaxed text-slate-500">
-                    Банковские реквизиты и закрывающие документы предоставляются
-                    по запросу.
-                  </p>
-                </div>
-                <a
-                  href={requestLink}
-                  className="mt-5 inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-ink transition-colors hover:text-signal"
-                >
-                  Запросить у СБ
-                  <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
-                </a>
-              </div>
             </Reveal>
           </div>
 
@@ -98,10 +68,10 @@ export function CompanyDetails() {
                     {item.label}
                   </dt>
                   <dd
-                    className={`mt-2.5 font-semibold tracking-[-0.02em] text-ink sm:mt-3 ${
+                    className={`mt-2.5 font-semibold tracking-[-0.02em] text-ink sm:mt-3 break-words ${
                       item.wide
-                        ? "max-w-[720px] text-[12px] leading-relaxed sm:text-[13px]"
-                        : "text-[15px] tabular-nums sm:text-[17px]"
+                        ? "max-w-[720px] leading-relaxed text-[clamp(11px,2.2vw,13px)]"
+                        : "tabular-nums text-[clamp(13px,2.5vw,17px)]"
                     }`}
                   >
                     {item.value}
