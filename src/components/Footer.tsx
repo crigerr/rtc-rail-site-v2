@@ -37,7 +37,9 @@ export function Footer() {
                 className="mt-1 h-5 w-5 shrink-0 text-signal sm:h-6 sm:w-6"
                 aria-hidden="true"
               />
-              <span className="whitespace-nowrap tabular-nums">{company.phone}</span>
+              <span className="whitespace-nowrap tabular-nums">
+                {company.phone}
+              </span>
             </a>
             <a
               href={`mailto:${company.email}`}
@@ -86,7 +88,7 @@ export function Footer() {
             {company.inn}
           </p>
           <p className="lg:text-right">
-            Фото:{" "}
+            Фото поезда:{" "}
             <a
               href="https://commons.wikimedia.org/wiki/File:VL80S-1059_with_freight_train_Dzerzhinsk.jpg"
               target="_blank"
@@ -96,23 +98,7 @@ export function Footer() {
               Anakin / Wikimedia Commons, CC BY 3.0
             </a>
             {" · "}
-            <a
-              href="https://commons.wikimedia.org/wiki/File:Intermodal_Freight_Containers_on_Flat_Cars_-_Knoxville,_Tennessee_-_November_8,_2014.jpg"
-              target="_blank"
-              rel="noreferrer"
-              className="transition-colors hover:text-white/55"
-            >
-              Lee Ann Ratledge, CC BY 4.0
-            </a>
-            {" · "}
-            <a
-              href="https://commons.wikimedia.org/wiki/File:Brampton_ON_CN-Rail_Freight-Train_Tank-Car_CBTX-745305_2025-07-30.jpg"
-              target="_blank"
-              rel="noreferrer"
-              className="transition-colors hover:text-white/55"
-            >
-              Milan Suvajac, CC BY-SA 4.0
-            </a>
+            платформа и цистерна — ООО «РТК»
           </p>
         </div>
       </Container>

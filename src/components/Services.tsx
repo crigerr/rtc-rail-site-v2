@@ -10,7 +10,7 @@ const services = [
       "Долгосрочная аренда под крупнотоннажные контейнеры. Организация техсодержания.",
     image: "/images/service-platforms.jpg",
     imageSmall: "/images/service-platforms-700.jpg",
-    alt: "Фитинговая платформа с крупнотоннажными контейнерами",
+    alt: "Фитинговая платформа РТК на железнодорожных путях",
   },
   {
     number: "02",
@@ -19,7 +19,7 @@ const services = [
       "Специализированный транспорт для перевозки каменноугольного пека с температурным режимом.",
     image: "/images/service-tanks.jpg",
     imageSmall: "/images/service-tanks-700.jpg",
-    alt: "Специализированная цистерна для перевозки жидкого пека",
+    alt: "Цистерна РТК для перевозки жидкого пека",
   },
 ];
 
@@ -51,11 +51,7 @@ export function Services() {
 
         <div className="mt-12 grid gap-6 lg:mt-16 lg:grid-cols-2 lg:gap-7">
           {services.map((service, index) => (
-            <Reveal
-              key={service.title}
-              delay={index * 0.08}
-              className="h-full"
-            >
+            <Reveal key={service.title} delay={index * 0.08} className="h-full">
               <article className="group flex h-full flex-col">
                 <div className="relative aspect-[3/2] overflow-hidden bg-ink">
                   <img
