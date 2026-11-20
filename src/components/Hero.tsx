@@ -10,8 +10,8 @@ export function Hero() {
       aria-labelledby="hero-heading"
     >
       <img
-        src="/images/hero-freight.jpg"
-        srcSet="/images/hero-freight-1200.jpg 1200w, /images/hero-freight.jpg 2200w"
+        src={`${import.meta.env.BASE_URL}images/hero-freight.jpg`}
+        srcSet={`${import.meta.env.BASE_URL}images/hero-freight-1200.jpg 1200w, ${import.meta.env.BASE_URL}images/hero-freight.jpg 2200w`}
         sizes="100vw"
         alt="Грузовой поезд с цистернами на железной дороге"
         fetchPriority="high"

@@ -21,7 +21,7 @@ export function Logo({ className, onClick, size = "md" }: LogoProps) {
       className={cn("inline-flex shrink-0 items-center", className)}
     >
       <img
-        src="/brand/rtk-logo.png"
+        src={`${import.meta.env.BASE_URL}brand/rtk-logo.png`}
         alt="РТК"
         width={702}
         height={314}

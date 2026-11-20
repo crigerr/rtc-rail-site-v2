@@ -8,8 +8,8 @@ const services = [
     title: "Фитинговые платформы",
     description:
       "Долгосрочная аренда под крупнотоннажные контейнеры. Организация техсодержания.",
-    image: "/images/service-platforms.jpg",
-    imageSmall: "/images/service-platforms-700.jpg",
+    image: `${import.meta.env.BASE_URL}images/service-platforms.jpg`,
+    imageSmall: `${import.meta.env.BASE_URL}images/service-platforms-700.jpg`,
     alt: "Фитинговая платформа РТК на железнодорожных путях",
   },
   {
@@ -17,8 +17,8 @@ const services = [
     title: "Цистерны для жидкого пека",
     description:
       "Специализированный транспорт для перевозки каменноугольного пека с температурным режимом.",
-    image: "/images/service-tanks.jpg",
-    imageSmall: "/images/service-tanks-700.jpg",
+    image: `${import.meta.env.BASE_URL}images/service-tanks.jpg`,
+    imageSmall: `${import.meta.env.BASE_URL}images/service-tanks-700.jpg`,
     alt: "Цистерна РТК для перевозки жидкого пека",
   },
 ];
